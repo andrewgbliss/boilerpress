@@ -1,0 +1,6 @@
+{
+  "verbose": true,
+  "ext": "js json pug",
+  "watch": "/usr/src/app/",
+  "legacyWatch": true
+}

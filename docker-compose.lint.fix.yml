@@ -1,0 +1,9 @@
+version: '3'
+services:
+  boilerpress-lint:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./src:/usr/src/app
+    command: ['npm', 'run', 'lint:fix']

@@ -1,0 +1,49 @@
+{
+  "name": "boilerpress",
+  "version": "0.0.1",
+  "description": "NodeJS Express Boilerplate",
+  "author": "Andrew Bliss <andrewgbliss@gmail.com>",
+  "main": "src/index.js",
+  "private": false,
+  "engines": {
+    "node": ">=8.5.0"
+  },
+  "scripts": {
+    "start": "node /usr/src/app/examples/default/index.js",
+    "dev": "nodemon --config /usr/src/app/examples/default/nodemon.json /usr/src/app/examples/default/index.js",
+    "dev:debug": "nodemon --config /usr/src/app/examples/default/nodemon-debug.json /usr/src/app/examples/default/index.js",
+    "lint": "eslint **/*.js",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "mocha /usr/src/app/test",
+    "test:watch": "npm run test -- --watch",
+    "validate": "npm run lint && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andrewgbliss/boilerpress.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "node.js",
+    "boilerplate",
+    "starter project"
+  ],
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.3.0",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0"
+  }
+}
