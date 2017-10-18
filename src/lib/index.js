@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 
 if (process.env.VIEWS_PATH) {
   app.set('views', process.env.VIEWS_PATH);
-  app.set('view engine', process.env.VIEWS_ENGINE || 'pug');
+  app.set('view engine', process.env.VIEWS_ENGINE);
 }
 
 if (process.env.STATIC_FILES_PATH) {
