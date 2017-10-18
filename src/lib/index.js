@@ -33,32 +33,6 @@ module.exports = {
     if (process.env.ROUTES_PATH) {
       app.use(require(process.env.ROUTES_PATH));
     }
-
-    app.use((req, res, next) => {
-      const err = new Error(`${req.method} ${req.url} Not Found`);
-      err.status = 404;
-      next(err);
-    });
-
-    app.use((err, req, res, next) => {
-      res.status(err.status || 500);
-      res.format({
-        html() {
-          res.render('error', {
-            message: err.message,
-            error: err,
-          });
-        },
-        json() {
-          res.json({
-            error: {
-              message: err.message,
-            },
-          });
-        },
-      });
-    });
-
     return new Promise((resolve) => {
       console.log('Starting express app ...');
       server = app.listen(process.env.PORT || '3000');
