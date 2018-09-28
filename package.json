@@ -1,6 +1,6 @@
 {
   "name": "boilerpress",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "NodeJS Express Boilerplate",
   "author": "Andrew Bliss <andrewgbliss@gmail.com>",
   "main": "src/index.js",
